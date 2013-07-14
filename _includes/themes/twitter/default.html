@@ -17,6 +17,8 @@
     <!-- Le styles -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -38,6 +40,10 @@
         <div class="container-narrow">
           <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
           <ul class="nav">
+            <a href="https://github.com/{{ site.author.github }}"><i class="icon-github-sign icon-2x brand"></i></a>
+            <a href="https://twitter.com/{{ site.author.twitter }}"><i class="icon-twitter icon-2x brand"></i></a>
+            <a href="http://www.linkedin.com/in/{{ site.author.linkedin }}"><i class="icon-linkedin-sign icon-2x brand"></i></a>
+          
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
@@ -54,9 +60,6 @@
       <hr>
       <footer>
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-        </p>
       </footer>
 
     </div>
