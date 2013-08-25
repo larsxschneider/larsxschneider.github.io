@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "10 Commandments"
+title: "Ten Commandments for Wunder Code"
 description: ""
 category:
 tags: []
