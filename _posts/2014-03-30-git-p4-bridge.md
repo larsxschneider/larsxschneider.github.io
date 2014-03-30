@@ -67,9 +67,11 @@ above. Here is how you use it:
 the [initial sync](https://github.com/larsxschneider/git-p4-bridge/blob/master/pull-p4-push-git.sh#L62) as well
 as on every [subsequent sync](https://github.com/larsxschneider/git-p4-bridge/blob/master/pull-p4-push-git.sh#L82). 
 3. Run the [pull-p4-push-git.sh](https://github.com/larsxschneider/git-p4-bridge/blob/master/pull-p4-push-git.sh) script:
-```
-./pull-p4-push-git.sh //P4/Project@all tcp:P4Server:1672 P4User P4Pass git@GitServer:Project.git GitBranch /path/to/git-ssh.key /path/to/ignore.pattern
-```
+
+        ./pull-p4-push-git.sh \
+            //P4/Project@all tcp:P4Server:1672 P4User P4Pass \
+            git@GitServer:Project.git GitBranch /path/to/git-ssh.key \
+            /path/to/ignore.pattern
 
 If this works as expected you can [add](https://github.com/larsxschneider/git-p4-bridge/blob/master/daemon-bridge.sh#L16)
 the call to script similar to [daemon-bridge.sh](https://github.com/larsxschneider/git-p4-bridge/blob/master/daemon-bridge.sh)
