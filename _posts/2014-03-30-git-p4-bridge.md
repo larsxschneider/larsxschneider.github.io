@@ -9,10 +9,10 @@ tags: [git, perforce, code, vcs]
 
 #### Motivation
 
-The company I work for traditionally uses the [Perforce](http://www.perforce.com/) version control system. When I
-joined the team we started a new project without any dependences to the existing Perforce code base. This allowed us
-to use the [Git](http://git-scm.com/) version control system. A couple of months later my team got quite proficient
-with the git workflow and we moved more and more projects to Git. Even other teams got excited about our
+The company I work for traditionally uses [Perforce](http://www.perforce.com/) as version control system. When I
+joined the team we started a new project without any dependencies to the existing Perforce code base. This allowed us
+to use [Git](http://git-scm.com/) instead. A couple of months later my team got quite proficient
+with the Git workflow and we moved more and more projects to Git. Even other teams got excited about our
 workflow and started using Git themselves. As a consequence to the increased Git usage we faced the following
 problem: How to integrate
 existing source code managed by Perforce into new Git projects?
@@ -74,7 +74,7 @@ as on every [subsequent sync](https://github.com/larsxschneider/git-p4-bridge/bl
             /path/to/ignore.pattern
 
 If this works as expected you can [add](https://github.com/larsxschneider/git-p4-bridge/blob/master/daemon-bridge.sh#L16)
-the call to script similar to [daemon-bridge.sh](https://github.com/larsxschneider/git-p4-bridge/blob/master/daemon-bridge.sh)
+the call to a script similar to [daemon-bridge.sh](https://github.com/larsxschneider/git-p4-bridge/blob/master/daemon-bridge.sh)
 in order to run it periodically. I usually run this script in a [tmux](http://robots.thoughtbot.com/a-tmux-crash-course)
 session on a server.
 
@@ -84,3 +84,8 @@ session on a server.
 If you see a simpler way to achieve the solution above I am happy to hear from you! I also have a script to sync into
 the opposite directory. In that setting the Git repository is the source of record and the code is pushed to a Perforce
 directory. This is a possible topic for a future post.
+
+
+#### Acknowledgements
+Thanks to [Ronny](https://github.com/esterlus) and Norman for proofreading! 
+
