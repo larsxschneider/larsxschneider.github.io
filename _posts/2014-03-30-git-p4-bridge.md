@@ -32,7 +32,7 @@ restriction but it makes the service a lot simpler (Why? Imagine two developers 
 same time on the same branch. How do you resolve that automatically?).
 
 The expected workflow is depicted below. The service polls Perforce for new changes __(1)__ and pushes them
-to a Git repository __(2)__. This Git repository can integrated as a [Git Submodule](http://git-scm.com/book/en/Git-Tools-Submodules)
+to a Git repository __(2)__. This Git repository can be integrated as a [Git Submodule](http://git-scm.com/book/en/Git-Tools-Submodules)
 into other Git repositories __(3)__ and cloned by the developers __(4)__.
 
 ![git-p4 bridge overview]({{ site.url }}/assets/images/gitp4-bridge.png)
@@ -51,7 +51,7 @@ For that purpose the `git-p4 clone` operation allows to define an ignore pattern
 applied on the initial sync. Any subsequent sync operation via `git-p4 rebase` will not respect this ignore pattern.
 
 Another caveat for big and slow Git repositories is the "@all" option passed to `git-p4 clone`. You usually want to
-set this option to import the entire history. In order to keep you Git repository small I recommend to ignore directories
+set this option to import the entire history. In order to keep your Git repository small I recommend to ignore directories
 that used to be big and have already been deleted. But how do you find huge directories and files?
 After your initial import you run [this](http://stubbisms.wordpress.com/2009/07/10/git-script-to-show-largest-pack-objects-and-trim-your-waist-line/) script on your Git repository. If you find anything big that is not useful then add it to the ignore pattern
 and import the repository again.
@@ -87,5 +87,5 @@ directory. This is a possible topic for a future post.
 
 
 #### Acknowledgements
-Thanks to [Ronny](https://github.com/esterlus) and Norman for proofreading! 
+Thanks to [Ronny](https://github.com/esterlus), Norman and Tanja for proofreading! 
 
