@@ -64,8 +64,8 @@ above. Here is how you use it:
 
 1. Define the source path of your Perforce repository that you want to sync to Git.
 2. If necessary, create a list of ignored directories and store them in a file (see [example](https://raw.githubusercontent.com/larsxschneider/git-p4-bridge/master/example.ignore)). This file is used to ignore all irrelevant Perforce paths on
-the [initial sync](https://github.com/larsxschneider/git-p4-bridge/blob/master/pull-p4-push-git.sh#L62) as well
-as on every [subsequent sync](https://github.com/larsxschneider/git-p4-bridge/blob/master/pull-p4-push-git.sh#L82). 
+the [initial sync](https://github.com/larsxschneider/git-p4-bridge/blob/4091ddff4ca77fb2c311948a6cbf50bb07883897/pull-p4-push-git.sh#L79) as well
+as on every [subsequent sync](https://github.com/larsxschneider/git-p4-bridge/blob/4091ddff4ca77fb2c311948a6cbf50bb07883897/pull-p4-push-git.sh#L99). 
 3. Run the [pull-p4-push-git.sh](https://github.com/larsxschneider/git-p4-bridge/blob/master/pull-p4-push-git.sh) script:
 
         ./pull-p4-push-git.sh \
@@ -73,8 +73,7 @@ as on every [subsequent sync](https://github.com/larsxschneider/git-p4-bridge/bl
             git@GitServer:Project.git GitBranch /path/to/git-ssh.key \
             /path/to/ignore.pattern
 
-If this works as expected you can [add](https://github.com/larsxschneider/git-p4-bridge/blob/master/daemon-bridge.sh#L16)
-the call to a script similar to [daemon-bridge.sh](https://github.com/larsxschneider/git-p4-bridge/blob/master/daemon-bridge.sh)
+If this works as expected you can add the call to a script similar to [daemon-bridge.sh](https://github.com/larsxschneider/git-p4-bridge/blob/master/daemon-bridge.sh)
 in order to run it periodically. I usually run this script in a [tmux](http://robots.thoughtbot.com/a-tmux-crash-course)
 session on a server.
 
