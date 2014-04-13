@@ -73,6 +73,7 @@ as on every [subsequent sync](https://github.com/larsxschneider/git-p4-bridge/bl
 3. Run the [pull-p4-push-git.sh](https://github.com/larsxschneider/git-p4-bridge/blob/master/pull-p4-push-git.sh) script:
 
         ./pull-p4-push-git.sh \
+            project-name \
             //P4/Project@all tcp:P4Server:1672 P4User P4Pass \
             git@GitServer:Project.git GitBranch /path/to/git-ssh.key \
             /path/to/ignore.pattern
