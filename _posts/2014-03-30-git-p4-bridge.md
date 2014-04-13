@@ -49,6 +49,10 @@ that is how I do it).
 As a consequence you need to carefully define what part of the Perforce repository ends up in your Git repository.
 For that purpose the `git-p4 clone` operation allows to define an ignore pattern. However, this ignore pattern is only
 applied on the initial sync. Any subsequent sync operation via `git-p4 rebase` will not respect this ignore pattern.
+This is problematic for multiple reasons. For one, it will bloat your Git repository over time (e.g. our build engineers submit
+the released binary to Perforce). Another reason is that you cannot reproduce the exact Git hashes if you restart
+the sync process from scratch. This is especially bad if your developers use the synced Git repository as Submodule
+because the Submodule hashes will change.
 
 Another caveat for big and slow Git repositories is the "@all" option passed to `git-p4 clone`. You usually want to
 set this option to import the entire history. In order to keep your Git repository small I recommend to ignore directories
@@ -77,6 +81,13 @@ If this works as expected you can add the call to a script similar to [daemon-br
 in order to run it periodically. I usually run this script in a [tmux](http://robots.thoughtbot.com/a-tmux-crash-course)
 session on a server.
 
+
+### Known Issues
+Unfortunately you cannot assume to get the exact same Git hashes if you start the sync process from scratch. The [Perforce change](http://www.perforce.com/perforce/doc.current/manuals/cmdref/p4_change.html) command allows to modify the description of
+a changelist after the fact. On a vanilla sync the corresponding Git commit messages will change and as a consequence the hash of
+the commit will change since the commit message is a part of the [Git commit hash calculation](http://git-scm.com/book/en/Git-Internals-Git-Objects#Commit-Objects). Even worse, every subsequent
+commit hash will change because the parent commit hash is part of the Git hash calculation as well. That means you need
+to update all references, e.g. via Git Submodules, to this Git repository.
 
 #### Outlook
 
