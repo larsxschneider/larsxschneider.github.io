@@ -84,8 +84,8 @@ session on a server.
 
 
 ### Known Issues
-Unfortunately you cannot assume to get the exact same Git hashes if you start the sync process from scratch. The [Perforce change](http://www.perforce.com/perforce/doc.current/manuals/cmdref/p4_change.html) command allows to modify the description of
-a changelist after the fact. On a vanilla sync the corresponding Git commit messages will change and as a consequence the hash of
+Unfortunately you cannot assume to get the exact same Git hashes if you start the sync process from scratch after using the tool for a while. The [Perforce change](http://www.perforce.com/perforce/doc.current/manuals/cmdref/p4_change.html) command allows to modify the description of
+a changelist after the fact. Thus on a clean sync a Git commit message might change and as a consequence the hash of
 the commit will change since the commit message is a part of the [Git commit hash calculation](http://git-scm.com/book/en/Git-Internals-Git-Objects#Commit-Objects). Even worse, every subsequent
 commit hash will change because the parent commit hash is part of the Git hash calculation as well. That means you need
 to update all references, e.g. via Git Submodules, to this Git repository.
@@ -93,7 +93,7 @@ to update all references, e.g. via Git Submodules, to this Git repository.
 #### Outlook
 
 If you see a simpler way to achieve the solution above I am happy to hear from you! I also have a script to sync into
-the opposite directory. In that setting the Git repository is the source of record and the code is pushed to a Perforce
+the opposite direction. In that setting the Git repository is the source of record and the code is pushed to a Perforce
 directory. This is a possible topic for a future post.
 
 
