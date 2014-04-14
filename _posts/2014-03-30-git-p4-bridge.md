@@ -3,7 +3,7 @@ layout: post
 title: "How to integrate source code manged by Perforce into a Git project?"
 description: ""
 category:
-tags: [git, perforce, code, vcs]
+tags: [git, perforce, code, vcs, git-p4, bash]
 ---
 {% include JB/setup %}
 
