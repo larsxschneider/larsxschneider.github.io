@@ -31,6 +31,6 @@ need to be said. Well, most of the things I still see every single day :-)
 6. Avoid redundant/repetitive code. Use descriptive variable names.
 7. Obey spelling in variable names and comments.
 8. Obey whitespaces and newlines.
-9. Delete code instead of uncommenting.
+9. Delete code instead of commenting.
 10. Cleanup dirty code as you spot it.
 
