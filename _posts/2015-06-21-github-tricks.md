@@ -22,4 +22,4 @@ One quirk to watch out for is that GitHub always highlights the same line number
 
 A number of editors support GitHub link creation directly from the source code via plugins ([Xcode](https://github.com/larsxschneider/ShowInGitHub), [Sublime](https://github.com/ehamiter/ST2-GitHubinator), [Atom](https://github.com/atom/open-on-github), [Vim](https://github.com/solars/github-vim), ...). This speeds up the process as you don't have to find the file and line number via your browser.
 
-This is all there is to know about GitHub source code link creation. I hope you enjoyed the article. In the next issue I will cover how to get the most out of your source code history using GitHub. 
+This is all there is to know about GitHub source code link creation and I hope you enjoyed the article. In the next issue I will cover how to get the most out of your source code history using GitHub. 
