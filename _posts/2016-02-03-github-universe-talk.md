@@ -3,7 +3,7 @@ layout: post
 title: "From Perforce To Git: Lessons Learned - GitHub Universe 2015 (Video)"
 description: ""
 category:
-tags: [github]
+tags: [github, git, perforce, vcs, git-p4, talk]
 ---
 {% include JB/setup %}
 
