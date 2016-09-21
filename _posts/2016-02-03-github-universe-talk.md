@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Talk] From Perforce To Git: Lessons Learned - GitHub Universe 2015"
+title: "From Perforce To Git: Lessons Learned - GitHub Universe 2015 (Video)"
 description: ""
 category:
 tags: [github]
